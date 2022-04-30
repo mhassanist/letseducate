@@ -27,7 +27,8 @@ export default function LearningRequestForm(props: {
             </p>
           </Card.Text>
           <Card.Body>
-            {props.request.description} <br></br>
+            {props.request.description} <br />
+            <br />
             <strong>Amount needed:</strong> {props.request.requestedAmount}
             <br></br>
             <strong>Collected so far:</strong> {props.request.collectedAmount}
