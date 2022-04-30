@@ -89290,6 +89290,10 @@ var SubmitForm = function (_a) {
       messages = _c[0],
       setMessages = _c[1];
 
+  var _d = (0, _react.useState)(false),
+      loadig = _d[0],
+      setLoading = _d[1];
+
   var history = (0, _reactRouterDom.useNavigate)();
   var getMessages = (0, _react.useCallback)(function () {
     var provider = new _nearApiJs.providers.JsonRpcProvider({
@@ -89320,6 +89324,7 @@ var SubmitForm = function (_a) {
     console.log(description.value);
     console.log(course_url.value);
     console.log(requested_amount.value);
+    setLoading(true);
     selector.signAndSendTransaction({
       signerId: accountId,
       actions: [{
@@ -89342,7 +89347,8 @@ var SubmitForm = function (_a) {
       console.log("Failed to add message");
       throw err;
     }).then(function () {
-      history("/");
+      setLoading(false);
+      history("/letseducate");
     }).catch(function (err) {
       console.error(err);
       fieldset.disabled = false;
@@ -89386,7 +89392,7 @@ var SubmitForm = function (_a) {
     title: "NEAR Tokens"
   }, "\u24C3")), _react.default.createElement("button", {
     type: "submit"
-  }, "Submit")));
+  }, loadig ? "loading" : "Submit")));
 };
 
 var _default = SubmitForm;
@@ -110593,7 +110599,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62244" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62317" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
