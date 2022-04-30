@@ -30,8 +30,7 @@ export default function LearningRequestForm(props: {
             {props.request.description} <br></br>
             <strong>Amount needed:</strong> {props.request.requestedAmount}
             <br></br>
-            <strong>Amount collected so far:</strong>{" "}
-            {props.request.collectedAmount}
+            <strong>Collected so far:</strong> {props.request.collectedAmount}
             <br></br>
           </Card.Body>
 

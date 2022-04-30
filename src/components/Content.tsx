@@ -171,12 +171,17 @@ const Content: React.FC = () => {
       <Router>
         <div>
           <nav>
-            <Link to="/">&#127968; Home</Link>
-            <Link to="/submit">&#10145;&#65039; Learner? Add New Request</Link>
+            <Link to="/letseducate/">&#127968; Home | Requests</Link>
+            <Link to="/letseducate/submit">
+              &#10145;&#65039; Learner? Add New Request
+            </Link>
           </nav>
           <Routes>
-            <Route path="/" element={<Content2 />} />
-            <Route path="/submit" element={<SubmitForm account={account} />} />
+            <Route path="/letseducate" element={<Content2 />} />
+            <Route
+              path="/letseducate/submit"
+              element={<SubmitForm account={account} />}
+            />
           </Routes>
         </div>
       </Router>

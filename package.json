@@ -6,7 +6,9 @@
     "web": "nodemon --watch assembly -e ts --exec parcel src/index.html --open",
     "build": "yarn build:web",
     "build:web": "parcel build src/index.html --public-url ./",
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
