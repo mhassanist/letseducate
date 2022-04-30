@@ -16,6 +16,7 @@ const SUGGESTED_DONATION = "1";
 const SubmitForm: React.FC<FormProps> = ({ account }) => {
   const { selector, accounts, accountId, setAccountId } = useWalletSelector();
   const [messages, setMessages] = useState<Array<LearningRequest>>([]);
+  const [loadig, setLoading] = useState(false);
   let history = useNavigate();
 
   const getMessages = useCallback(() => {
@@ -48,6 +49,8 @@ const SubmitForm: React.FC<FormProps> = ({ account }) => {
       console.log(course_url.value);
       console.log(requested_amount.value);
 
+      setLoading(true);
+
       selector
         .signAndSendTransaction({
           signerId: accountId!,
@@ -76,7 +79,9 @@ const SubmitForm: React.FC<FormProps> = ({ account }) => {
           throw err;
         })
         .then(() => {
-          history("/");
+          setLoading(false);
+
+          history("/letseducate");
         })
         .catch((err) => {
           console.error(err);
@@ -119,7 +124,7 @@ const SubmitForm: React.FC<FormProps> = ({ account }) => {
           />
           <span title="NEAR Tokens">Ⓝ</span>
         </p>
-        <button type="submit">Submit</button>
+        <button type="submit">{loadig ? "loading" : "Submit"}</button>
       </fieldset>
     </form>
   );
