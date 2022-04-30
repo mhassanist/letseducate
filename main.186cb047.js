@@ -86818,7 +86818,7 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var SignIn = function () {
-  return _react.default.createElement(_react.Fragment, null, _react.default.createElement("p", null, "Connecting educators with believers all over the world!"), _react.default.createElement("p", null, "Learners who can't afford education or buying courses use", " ", _react.default.createElement("strong", null, "let's educate"), " to seek fund, Beleivers worldwide can donate to help them learn."), _react.default.createElement("p", null, "Login to explore .."));
+  return _react.default.createElement(_react.Fragment, null, _react.default.createElement("p", null, "Connecting learners with believers all over the world!"), _react.default.createElement("p", null, "Learners who can't afford education or buying courses use", " ", _react.default.createElement("strong", null, "let's educate"), " to seek fund, Beleivers worldwide can donate to help them learn."), _react.default.createElement("p", null, "Login to explore .."));
 };
 
 var _default = SignIn;
@@ -109851,7 +109851,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function LearningRequestForm(props) {
   return _react.default.createElement(_reactBootstrap.Col, {
     size: 3
-  }, _react.default.createElement(_Card.default, null, _react.default.createElement(_Card.default.Body, null, _react.default.createElement(_Card.default.Title, null, " By: ", props.account.account_id, " "), _react.default.createElement(_Card.default.Text, null, " ", _react.default.createElement("p", {
+  }, _react.default.createElement(_Card.default, null, _react.default.createElement(_Card.default.Body, null, _react.default.createElement(_Card.default.Title, null, " By: ", props.request.poster, " "), _react.default.createElement(_Card.default.Text, null, " ", _react.default.createElement("p", {
     className: "highlight"
   }, _react.default.createElement("label", {
     htmlFor: "title",
@@ -109884,6 +109884,7 @@ var Requests = function (_a) {
     return _react.default.createElement(_LearningRequestForm.default, {
       key: i,
       request: {
+        poster: message.poster,
         title: message.title,
         description: message.description,
         requestedAmount: message.requestedAmount,
@@ -110599,7 +110600,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62317" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62673" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
