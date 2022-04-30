@@ -71,8 +71,6 @@ fieldset {
   display: flex;
   margin-bottom: 0.5em;
   width: 100%; }
-  .highlight label {
-    margin-right: 0.5em; }
   .highlight input {
     caret-color: var(--secondary); }
 
@@ -137,7 +135,6 @@ input {
   display: inline-block; }
 
 label {
-  width: 30%;
   /* Positions the label text beside the input */
   text-align: left; }
 

@@ -109850,7 +109850,7 @@ function LearningRequestForm(props) {
   }, _react.default.createElement("label", {
     htmlFor: "title",
     id: "title"
-  }, props.request.title))), _react.default.createElement(_Card.default.Body, null, props.request.description, " ", _react.default.createElement("br", null), _react.default.createElement("strong", null, "Amount needed:"), " ", props.request.requestedAmount, _react.default.createElement("br", null), _react.default.createElement("strong", null, "Amount collected so far:"), " ", props.request.collectedAmount, _react.default.createElement("br", null)), _react.default.createElement(_Card.default.Footer, null, _react.default.createElement(_PaySupportForm.default, {
+  }, props.request.title))), _react.default.createElement(_Card.default.Body, null, props.request.description, " ", _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("strong", null, "Amount needed:"), " ", props.request.requestedAmount, _react.default.createElement("br", null), _react.default.createElement("strong", null, "Collected so far:"), " ", props.request.collectedAmount, _react.default.createElement("br", null)), _react.default.createElement(_Card.default.Footer, null, _react.default.createElement(_PaySupportForm.default, {
     account: props.account,
     title: props.request.title
   })))));
@@ -110508,14 +110508,14 @@ var Content = function () {
     id: "logoutbtn",
     onClick: handleSignOut
   }, "Log out"), _react.default.createElement("p", null, "Thanks for joining, ", account.account_id, " , You can support worldwide learners below")), _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement("div", null, _react.default.createElement("nav", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, "\uD83C\uDFE0 Home"), _react.default.createElement(_reactRouterDom.Link, {
-    to: "/submit"
+    to: "/letseducate/"
+  }, "\uD83C\uDFE0 Home | Requests"), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/letseducate/submit"
   }, "\u27A1\uFE0F Learner? Add New Request")), _react.default.createElement(_reactRouterDom.Routes, null, _react.default.createElement(_reactRouterDom.Route, {
-    path: "/",
+    path: "/letseducate",
     element: _react.default.createElement(_Content.default, null)
   }), _react.default.createElement(_reactRouterDom.Route, {
-    path: "/submit",
+    path: "/letseducate/submit",
     element: _react.default.createElement(_SubmitRequest.default, {
       account: account
     })
@@ -110593,7 +110593,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63966" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61871" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
