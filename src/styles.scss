@@ -6,8 +6,9 @@ html {
   --bg: #eaf4fc;
   --fg: #25282a;
   //--gray: #888;
-  --royal: #0072ce;
-  --blue: #6ad1e3;
+  --royal: #3bf632;
+  --blue: #d6ffda;
+  --green: #03ba4c;
   --primary: black;
   --secondary: var(--royal);
   --tertiary: #ff585d;
@@ -93,8 +94,8 @@ button,
 .highlight {
   border-radius: 5px;
   border-color: var(--primary);
-  border: 0.1em solid var(--primary);
-  padding: 0.5em 1em;
+  border: 0.1em solid var(--green);
+  padding: 0.5em 0.5em;
   margin-right: 10px;
   &:hover,
   &:focus,
@@ -153,18 +154,25 @@ button {
 }
 form {
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding: 10px auto;
 }
 
+form button {
+  margin: 0 auto;
+  display: block;
+  width: 30%;
+}
 label,
 input {
   /* In order to define widths */
   display: inline-block;
 }
 
-label {
+form label {
+  width: 30%;
   /* Positions the label text beside the input */
-  text-align: left;
+  text-align: right;
 }
 
 label + input {
