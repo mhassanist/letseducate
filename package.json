@@ -5,15 +5,8 @@
   "scripts": {
     "web": "nodemon --watch assembly -e ts --exec parcel src/index.html --open",
     "build": "yarn build:web",
-    "build:contract": "asb",
-    "build:contract:debug": "asb --target debug",
     "build:web": "parcel build src/index.html --public-url ./",
-    "deploy": "yarn build && near deploy",
-    "dev": "near dev-deploy && nodemon --watch assembly -e ts --exec yarn dev:start",
-    "lint": "eslint \"./**/*.js\" \"./**/*.jsx\"",
-    "start": "parcel src/index.html",
-    "dev:start": "env-cmd -f ./neardev/dev-account.env parcel src/index.html",
-    "test": "yarn build:contract:debug && asp && jest"
+    "start": "parcel src/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
